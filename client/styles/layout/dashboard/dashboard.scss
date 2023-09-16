@@ -1,0 +1,24 @@
+.user-info-table {
+  th {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  td {
+    font-size: 16px;
+    font-size: 400;
+    color: $info;
+  }
+  #purple {
+    color: #9c27b0;
+    background-color: #e1bee7;
+  }
+  #blue {
+    color: #2196f3;
+    background-color: #bbdefb;
+  }
+  #green {
+    color: #4caf50;
+    background-color: #c8e6c9;
+  }
+}

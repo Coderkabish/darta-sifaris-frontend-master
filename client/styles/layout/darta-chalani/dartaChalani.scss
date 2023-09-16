@@ -1,0 +1,42 @@
+.darta-form{
+    fieldset {
+        legend {
+            position: relative;
+            font-size: 22px;
+            padding: 0 2px;
+            width: 100%;
+            margin-bottom: 10px;
+            width: fit-content;
+          }
+          legend::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: $primary;
+            border-radius: 10px;
+            bottom: -5px;
+            left: 0px;
+          }
+      }
+}
+
+// Another page darta-kitab
+.darta-data{
+    td{
+        color: $info !important;
+        font-size: 0.95rem;
+    }
+}
+
+.table-div{
+    max-width: 100%;
+    @media (max-width: 988px) {
+        overflow: scroll;
+    }
+    table{
+        @media (max-width: 988px) {
+            width: 830px;
+        }
+    }
+}

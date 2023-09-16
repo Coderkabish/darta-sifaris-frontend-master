@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+// customizing bootstrap colors
+$primary: #336699;
+$secondary: #08276d;
+$warning: #f1556c;
+$success: #43bfe5;
+$black: #000000;
+$softBlack: #1f1d2b;
+$white: #fff;
+$info: #808080;
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1180px,
+  xxl: 1320px,
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-21 {
+  font-size: 21px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-23 {
+  font-size: 23px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 1rem;
+  color: $black;
+}
+
+h6 {
+  font-size: 0.875rem;
+  color: $black;
+  font-weight: 500;
+}
+
+p {
+  margin: 0px;
+}
+
+th {
+  font-weight: 500;
+}
+
+.btn-primary {
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-warning:hover,
+.btn-success:hover {
+  color: #ffffff;
+}
+
+.btn-warning {
+  color: #ffffff;
+}
+
+.btn-success {
+  color: #ffffff;
+}
+
+//
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mukta', sans-serif;
+  text-decoration: none !important;
+}
+
+.kanit{
+  font-family: 'Kanit', sans-serif;
+}
+
+a {
+  color: #000000;
+}
+
+.text-red {
+  color: #aa0707;
+}
+
+.text-green {
+  color: #14e20d;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.underline-header {
+  position: relative;
+}
+
+.underline-header::after {
+  content: '';
+  position: absolute;
+  width: 13%;
+  height: 3px;
+  background-color: $primary;
+  border-radius: 10px;
+  bottom: -5px;
+}
+
+.light-bg{
+  background-color: #f3f6f9;
+  color: #878a99!important;
+}
+
+.muted-text{
+  color: #495057;
+}
