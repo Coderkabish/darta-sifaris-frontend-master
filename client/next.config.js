@@ -31,7 +31,7 @@ const nextConfig = {
     domains: ["images.unsplash.com"],
   },
   env: {
-    API_URL: "http://127.0.0.1:3000",
+    API_URL: "https://mongoose-funky-miserably.ngrok-free.app",
   },
 };
 
