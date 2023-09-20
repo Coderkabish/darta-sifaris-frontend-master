@@ -140,6 +140,7 @@ const PersonalDetails: NextPageWithLayout = () => {
                     withAsterisk
                   />
                 </SimpleGrid>
+                <div className="bg-red-600 hover:bg-green-800">Hello</div>
               </fieldset>
               <Button className="fs-16 fw-500" type="submit" mt={10} w="20%">
                 {' '}
