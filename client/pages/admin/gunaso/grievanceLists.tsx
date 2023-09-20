@@ -14,30 +14,12 @@ const DartaKitab: NextPageWithLayout = () => {
   const tableData = [
     {
       id: 1,
-      dartaNumber: 'R-16',
-      dartaDate: '2079-10-04',
-      letterCount: 3,
-      officeName: 'जलविद्युत लगानी तथा विकास कम्पनी लिमिटेड',
-      name: 'नबिन चौधरी',
-      subject: 'चेककको माग',
-    },
-    {
-      id: 2,
-      dartaNumber: 'R-17',
-      dartaDate: '2080-02-15',
-      letterCount: 5,
-      officeName: 'उद्योग स्ववायत्त तथा निजीकृत बैंक लिमिटेड',
-      name: 'सान्तोष कुमार ढुंगाना',
-      subject: 'नगदको माग',
-    },
-    {
-      id: 3,
-      dartaNumber: 'R-18',
-      dartaDate: '2081-05-20',
-      letterCount: 2,
-      officeName: 'यातायात अधिकारी व्यावसायिक बैंक लिमिटेड',
-      name: 'महेन्द्र मानन्धर',
-      subject: 'नगदको माग',
+      token: '1692169061',
+      type: 'भ्रष्टाचार नियन्त्रण विषयक',
+      title: 'कमजोर आर्थिक अवस्था',
+      date: '2023-08-16',
+      seriousness: ' उच्च प्राथमिकता ',
+      status: 'बन्द',
     },
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -79,12 +61,12 @@ const DartaKitab: NextPageWithLayout = () => {
             <thead>
               <tr className="bg-success text-white fw-600">
                 <th scope="col">क्र.स</th>
-                <th scope="col">दर्ता न.</th>
-                <th scope="col">दर्ता मिति</th>
-                <th scope="col">पत्र संख्या</th>
-                <th scope="col">पठाउने कार्यालयको नाम</th>
-                <th scope="col">बुझिलिनेको नाम</th>
-                <th scope="col">बिषय</th>
+                <th scope="col">टोकन</th>
+                <th scope="col">गुनासोको प्रकार</th>
+                <th scope="col">गुनासोको शिर्षक</th>
+                <th scope="col"> गुनासो प्रकाशन मिति</th>
+                <th scope="col"> गुनासो गम्भीरता</th>
+                <th scope="col"> गुनासोको अवस्था</th>
                 <th scope="col">कार्यहरू</th>
               </tr>
             </thead>
@@ -92,33 +74,19 @@ const DartaKitab: NextPageWithLayout = () => {
               {tableData.map((row) => (
                 <tr key={row.id}>
                   <td>{row.id}</td>
-                  <td>{row.dartaNumber}</td>
-                  <td>{row.dartaDate}</td>
-                  <td>{row.letterCount}</td>
-                  <td>{row.officeName}</td>
-                  <td>{row.name}</td>
-                  <td>{row.subject}</td>
+                  <td>{row.token}</td>
+                  <td>{row.type}</td>
+                  <td>{row.title}</td>
+                  <td>{row.date}</td>
+                  <td>{row.seriousness}</td>
+                  <td>{row.status}</td>
                   <td>
                     <button
-                      onClick={() => router.push('/admin/darta-chalani/view-darta')}
+                      onClick={() => router.push('#')}
                       className="btn btn-primary px-1 p-0 border-1 me-1 "
                       type="button"
                     >
                       <IconEye width={16} />
-                    </button>
-                    <button
-                      onClick={() => router.push('/admin/darta-chalani/edit-darta')}
-                      className="btn btn-primary px-1 p-0 border-1 me-1"
-                      type="button"
-                    >
-                      <IconEdit width={16} />
-                    </button>
-                    <button
-                      onClick={openModal}
-                      className="btn btn-warning px-1 p-0 border-1 me-1"
-                      type="button"
-                    >
-                      <IconTrash width={16} />
                     </button>
                   </td>
                 </tr>

@@ -14,30 +14,10 @@ const DartaKitab: NextPageWithLayout = () => {
   const tableData = [
     {
       id: 1,
-      dartaNumber: 'R-16',
-      dartaDate: '2079-10-04',
-      letterCount: 3,
-      officeName: 'जलविद्युत लगानी तथा विकास कम्पनी लिमिटेड',
-      name: 'नबिन चौधरी',
-      subject: 'चेककको माग',
-    },
-    {
-      id: 2,
-      dartaNumber: 'R-17',
-      dartaDate: '2080-02-15',
-      letterCount: 5,
-      officeName: 'उद्योग स्ववायत्त तथा निजीकृत बैंक लिमिटेड',
-      name: 'सान्तोष कुमार ढुंगाना',
-      subject: 'नगदको माग',
-    },
-    {
-      id: 3,
-      dartaNumber: 'R-18',
-      dartaDate: '2081-05-20',
-      letterCount: 2,
-      officeName: 'यातायात अधिकारी व्यावसायिक बैंक लिमिटेड',
-      name: 'महेन्द्र मानन्धर',
-      subject: 'नगदको माग',
+      name: 'सुन्दर कुमार के.सी.',
+      email: 'abc@gmail.com',
+      phone: '98213521321',
+      count: '2',
     },
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,7 +36,7 @@ const DartaKitab: NextPageWithLayout = () => {
     <Box p={20} className="darta-data">
       <Paper>
         <div className="d-md-flex justify-content-between mb-3 border-bottom pb-1">
-          <h4 className="text-primary pb-2 ms-1">दर्ता पत्र</h4>
+          <h4 className="text-primary pb-2 ms-1">गुनासो प्रयोगकर्ताहरु</h4>
           <div className="d-flex">
             <Autocomplete
               placeholder="Search"
@@ -79,12 +59,10 @@ const DartaKitab: NextPageWithLayout = () => {
             <thead>
               <tr className="bg-success text-white fw-600">
                 <th scope="col">क्र.स</th>
-                <th scope="col">दर्ता न.</th>
-                <th scope="col">दर्ता मिति</th>
-                <th scope="col">पत्र संख्या</th>
-                <th scope="col">पठाउने कार्यालयको नाम</th>
-                <th scope="col">बुझिलिनेको नाम</th>
-                <th scope="col">बिषय</th>
+                <th scope="col">नाम</th>
+                <th scope="col">इमेल</th>
+                <th scope="col">फोन नं</th>
+                <th scope="col">गुनासोहरुको संख्या</th>
                 <th scope="col">कार्यहरू</th>
               </tr>
             </thead>
@@ -92,12 +70,10 @@ const DartaKitab: NextPageWithLayout = () => {
               {tableData.map((row) => (
                 <tr key={row.id}>
                   <td>{row.id}</td>
-                  <td>{row.dartaNumber}</td>
-                  <td>{row.dartaDate}</td>
-                  <td>{row.letterCount}</td>
-                  <td>{row.officeName}</td>
                   <td>{row.name}</td>
-                  <td>{row.subject}</td>
+                  <td>{row.email}</td>
+                  <td>{row.phone}</td>
+                  <td>{row.count}</td>
                   <td>
                     <button
                       onClick={() => router.push('/admin/darta-chalani/view-darta')}
